@@ -91,8 +91,10 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10">🚀 Get Started</span>
+          ><a href='#contact'>
+
+            <span className="relative z-10">Contact Us</span>
+          </a>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600"
               initial={{ x: "-100%" }}
@@ -156,7 +158,9 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              🚀 Get Started
+              <a href='#contact'>
+              Contact Us
+              </a>
             </motion.button>
           </div>
         </motion.div>
