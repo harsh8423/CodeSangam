@@ -28,20 +28,20 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4 text-sm sm:text-base">Company</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li>About Us</li>
-              <li>Portfolio</li>
-              <li>Blog</li>
-              <li>Contact</li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#portfolio">Work</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-sm sm:text-base">Connect</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li>LinkedIn</li>
-              <li>GitHub</li>
-              <li>Twitter</li>
-              <li>Email</li>
+              <li><a href="https://www.linkedin.com/in/code-sangam/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/codesangam.tech/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://x.com/CodeSangam_tech" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+              <li><a href="mailto:codesangam.tech@gmail.com">Email</a></li>
             </ul>
           </div>
         </div>

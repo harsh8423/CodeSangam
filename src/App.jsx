@@ -4,8 +4,8 @@ import Services from './sections/Services'
 import Portfolio from './sections/Portfolio'
 import WhyChooseUs from './sections/WhyChooseUs'
 import About from './sections/About'
-import CTA from './sections/CTA'
 import Footer from './components/Footer'
+import Contact from './sections/Contact'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Services />
       <Portfolio />
       <WhyChooseUs />
-      <CTA />
+      <Contact />
       <Footer />
     </div>
   )

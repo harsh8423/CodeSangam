@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import csLogo from '../assets/cs-logo.jpg'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,7 +28,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = ['About', 'Services', 'Portfolio', 'Contact']
+  const navItems = ['About', 'Services', 'Portfolio']
 
   return (
     <motion.header 
@@ -48,18 +49,17 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
           >
             <motion.div 
-              className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg"
+              className="w-30 h-10 lg:w-32 lg:h-12 rounded-2xl overflow-hidden"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="text-white text-lg lg:text-xl font-bubble">CS</span>
+              <img 
+                src={csLogo} 
+                alt="Code Sangam Logo" 
+                className="w-full h-full "
+              />
             </motion.div>
-            <motion.span 
-              className="text-2xl lg:text-3xl font-bubble text-gray-800"
-              whileHover={{ scale: 1.05 }}
-            >
-              Code Sangam
-            </motion.span>
+            
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -85,7 +85,7 @@ const Header = () => {
           
           {/* CTA Button */}
           <motion.button
-            className="hidden lg:block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-2xl font-bubble text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            className="hidden lg:block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-2xl font-bubble text-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -165,4 +165,4 @@ const Header = () => {
   )
 }
 
-export default Header 
+export default Header
