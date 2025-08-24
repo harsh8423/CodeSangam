@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion'
 
 const Hero = () => {
+
+  const openCalendly = () => {
+    // Open Calendly in a new window
+    window.open('https://calendly.com/harsh857498/30min', '_blank')
+  }
+
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 relative overflow-hidden pt-20">
       {/* Floating particles background */}
@@ -134,11 +141,12 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.8 }}
             >
               <motion.button 
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-base sm:text-lg font-bubble hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+                className="bg-gradient-to-r cursor-pointer from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-base sm:text-lg font-bubble hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(139, 92, 246, 0.4)"
                 }}
+                onClick={openCalendly}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative z-10">🎯 Book a Free Consultation</span>
@@ -159,8 +167,10 @@ const Hero = () => {
                   color: "white"
                 }}
                 whileTap={{ scale: 0.95 }}
-              >
+              ><a href='#portfolio'>
+
                 <span className="relative z-10">📁 View Portfolio</span>
+              </a>
               </motion.button>
             </motion.div>
           </motion.div>
